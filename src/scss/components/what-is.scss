@@ -1,0 +1,152 @@
+@use "../mixins";
+
+section#what-is {
+    align-items: center;
+    margin-bottom: var(--section-spacing-y);
+
+    .cols {
+
+        @include mixins.bp(desktop) {
+            flex-wrap: nowrap;
+        }
+
+        .col.what-is-content {
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            p {
+                --text-color: var(--color-muted);
+            }
+
+            @include mixins.bp(desktop) {
+                padding-bottom: 0;
+                padding-top: 55px;
+                width: calc((6/12 * 100%));
+            }
+
+            @include mixins.bp(large-desktop) {
+                padding-top: 70px;
+                width: calc(4/12 * 100%);
+            }
+
+            h2 {
+                margin-bottom: 30px;
+
+            }
+        }
+
+        .col.what-is-creators {
+            margin-left: auto;
+            width: 100%;
+            position: relative;
+            margin-bottom: 75px;
+
+            @include mixins.bp(desktop) {
+                max-width: calc(6/12 * 100%);
+                margin-top: -100px;
+                margin-bottom: 0;
+            }
+
+            @include mixins.bp(large-desktop) {
+                max-width: calc(5/12 * 100%);
+                margin-right: calc(1/12 * 100%);
+                max-height: 850px;
+                overflow: hidden;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+            }
+
+            &:before {
+                top: 0;
+                bottom: 75%;
+                background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--body-background-color) 100%);
+
+                @include mixins.bp(desktop) {
+                    display: none;
+                }
+            }
+
+            &:after {
+                top: 75%;
+                bottom: 0;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--body-background-color) 100%);
+            }
+        }
+
+        .svg.svg-shape_four {
+            position: absolute;
+            right: 0;
+            width: 150px;
+            bottom: -60px;
+
+            @include mixins.bp(desktop) {
+                width: 210px;
+                right: -40px;
+            }
+
+        }
+    }
+
+    .creators {
+        display: grid;
+        width: 100%;
+        gap: 8px 10px;
+        //grid-template-columns: auto auto auto auto;
+        // use repeat like repeat(4, 1fr) to make it responsive
+        grid-template-columns: auto auto auto auto;
+        height: 400px;
+        overflow: hidden;
+
+        @include mixins.bp(large-mobile) {
+            gap: 12px 16px;
+            grid-template-columns: auto auto auto auto auto auto;
+            height: 500px;
+        }
+
+        @include mixins.bp(desktop) {
+            height: auto;
+            gap: 18px 20px;
+            grid-template-columns: auto auto auto auto;
+
+        }
+
+        @include mixins.bp(large-desktop) {}
+
+
+        .creator {
+            aspect-ratio: 125/230;
+            border-radius: 10rem;
+            overflow: hidden;
+            z-index: -1;
+            height: min-content;
+            max-width: 10rem;
+            background-color: #e3e3e3;
+
+            &.loading {
+                img {
+                    opacity: 0;
+                }
+            }
+
+
+            &:nth-child(2n) {
+                margin-top: -100%;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                opacity: 1;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+    }
+}

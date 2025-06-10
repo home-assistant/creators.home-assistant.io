@@ -1,0 +1,5 @@
+@use "../mixins";
+
+section#faq {
+    padding: var(--section-spacing-y) 0;
+}

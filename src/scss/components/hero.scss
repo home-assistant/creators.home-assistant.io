@@ -1,0 +1,182 @@
+@use "../mixins";
+
+section#hero {
+    --text-color: #ffffff;
+    align-items: center;
+
+    z-index: 1;
+
+    &:before {
+        content: '';
+        background: linear-gradient(90deg, #0898C7 0%, #006BA8 100%);
+        position: absolute;
+        height: 120px;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .hero-inner {
+        padding: 60px 0;
+        overflow: hidden;
+        isolation: isolate;
+        background: linear-gradient(90deg, #0898C7 0%, #006BA8 100%);
+
+        @include mixins.bp(large-desktop) {
+            padding: 120px 0;
+        }
+    }
+
+    .heading-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px 20px;
+
+        @include mixins.bp(large-desktop) {
+            align-items: flex-end;
+            flex-direction: row;
+        }
+
+        .svg {
+            --width: 140px;
+            color: var(--color-light-primary);
+            position: absolute;
+            width: var(--width);
+            left: calc((100% - (var(--width) / 2)) + 10%);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            transform-origin: top;
+            scale: 0.8;
+            opacity: 0;
+            animation: zoom-in .75s .5s cubic-bezier(.17, .6, .43, .97) forwards;
+
+            svg {
+                animation: rotate 80s linear infinite;
+                width: 100%;
+            }
+
+            @include mixins.bp(large-mobile) {
+                --width: 200px;
+                left: calc((100% - (var(--width) / 2)) + 2%);
+            }
+
+            @include mixins.bp(desktop) {
+                --width: 230px;
+            }
+
+            @include mixins.bp(large-desktop) {
+                --width: 255px;
+            }
+        }
+
+        h1 {
+            display: inline-flex;
+            flex-direction: column;
+            line-height: 1;
+            white-space: nowrap;
+
+            @include mixins.bp(large-desktop) {
+                align-items: flex-end;
+            }
+
+            div:last-child {
+                z-index: -2;
+            }
+        }
+
+        div {
+            display: inline-block;
+            position: relative;
+        }
+    }
+
+    .subtitle {
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        line-height: 1.2;
+        gap: 8px;
+
+
+        @include mixins.bp(large-desktop) {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        span:last-child {
+            font-weight: 600;
+        }
+
+        img {
+            display: block;
+            width: 230px;
+
+            @include mixins.bp(large-mobile) {
+                width: 310px;
+            }
+        }
+    }
+
+    .hero-content-intro {
+        width: 100%;
+        max-width: 670px;
+        margin-left: auto;
+        margin-top: 60px;
+
+        @include mixins.bp(large-mobile) {
+            margin-top: 80px;
+        }
+
+        @include mixins.bp(tablet) {
+            margin-top: 100px;
+        }
+
+        @include mixins.bp(desktop) {
+            margin-top: 115px;
+        }
+
+        @include mixins.bp(large-desktop) {
+            margin-top: 130px;
+            margin-right: calc(1/12 * 100%);
+        }
+    }
+
+    .wave {
+        position: relative;
+        top: 0;
+        height: 105px;
+
+        @include mixins.bp(desktop) {
+            height: 83px;
+        }
+
+        @include mixins.bp(large-desktop) {
+            height: 160px;
+        }
+
+
+        .svg-shape_two {
+            position: absolute;
+            z-index: 1;
+            width: 157px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mixins.bp(desktop) {
+                width: 250px;
+                top: 0;
+            }
+
+            @include mixins.bp(large-desktop) {
+                width: 315px;
+                top: 35%;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+<section id="what-is">
+  <div class="container">
+    <div class="cols">
+      <div class="col what-is-content">
+        <h2>
+          <span>What's the</span>
+          Creator Network?
+        </h2>
+        <p>
+          The Creator Network is a group of active content creators who engage
+          with the community by crafting consistent, informational content about
+          Home Assistant.
+        </p>
+        <p>
+          Members of our Network make tutorials, post unbiased product reviews,
+          or showcase cool projects with the goal of helping people use Home
+          Assistant on YouTube, TikTok, Instagram, and other social platforms.
+        </p>
+        <a href="#" class="button animated large">Apply now</a>
+      </div>
+      <div class="col what-is-creators">
+        <div class="creators">
+          {% for member in creators.members %}
+          <div class="creator loading">
+            <img
+              src="/img/creators/{{ member.image }}"
+              alt="{{ member.name }}"
+              loading="lazy"
+            />
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% svg "shape_four" %}
+    </div>
+  </div>
+  <noscript>
+    <style>
+      section.what-is .what-is-creators .creators .creator.loading img {
+        opacity: 1;
+        transition: none;
+      }
+    </style>
+  </noscript>
+  <script>
+    // randomise the order of the creators using `order`
+    const creators = document.querySelector(".what-is-creators .creators");
+    const creatorElements = Array.from(creators.children);
+    creatorElements.sort(() => Math.random() - 0.5);
+    creators.innerHTML = "";
+    creatorElements.forEach((el) => {
+      creators.appendChild(el);
+    });
+    // remove all `loading` classes
+
+    const loadingElements = document.querySelectorAll(".loading");
+    loadingElements.forEach((el) => {
+      el.classList.remove("loading");
+    });
+  </script>
+</section>

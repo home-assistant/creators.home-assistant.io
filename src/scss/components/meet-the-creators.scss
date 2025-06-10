@@ -1,0 +1,66 @@
+@use "../mixins";
+
+section#meet-the-creators {
+
+    .scrolly-text {
+
+        h2 {
+            font-size: clamp(1.5rem, 17vw, 450px);
+            transform: translateX(calc(0% + (-60% * (var(--dsap-scroll-delta) / var(--dsap-max-scroll-delta)))));
+            transition: transform 0s ease-out;
+            white-space: nowrap;
+
+            &:after {
+                content: " Meet the Creators Meet the Creators";
+            }
+
+            @include mixins.bp(md) {
+                transform: translateX(calc(0% + (-35% * (var(--dsap-scroll-delta) / var(--dsap-max-scroll-delta)))));
+            }
+        }
+    }
+
+    .creator-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+
+        .creator-card {
+            display: flex;
+            padding: 10px 25px 10px 10px;
+            border-radius: 15rem;
+            gap: 20px;
+            background-color: white;
+
+            img {
+                border-radius: 50%;
+                height: 70px;
+                width: 70px;
+            }
+
+            .creator-card-content {
+                display: flex;
+                gap: 4px;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .creator-card-title {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .creator-card-description {}
+
+            .creator-card-links {
+                display: flex;
+
+                .svg {
+                    width: 24px;
+                }
+            }
+
+        }
+    }
+}
