@@ -1,9 +1,21 @@
-<section id="meet-the-creators" data-dsap data-dsap-scroll>
+<section id="meet-the-creators">
   <div class="scrolly-text">
-    <h2>Meet the creators</h2>
+    <h2 class="marquee">Meet the creators</h2>
   </div>
   <div class="container">
-    <div class="creator-cards">
+    <p class="text-large">
+      Check out the content created by our network members below. You can see
+      all of their channels in our
+      <a
+        class="showline"
+        href="https://discord.com/channels/330944238910963714/1340091714446168196"
+        target="_blank"
+        >Discord server</a
+      >
+    </p>
+  </div>
+  <div class="container large">
+    <div class="creator-cards" data-dsap data-dsap-scroll>
       {% for member in creators.members %}
       <div class="creator-card">
         <img
@@ -13,25 +25,69 @@
         />
         <div class="creator-card-content">
           <div class="creator-card-title">{{ member.name }}</div>
+          {% if member.real_name %}
+          <div class="creator-card-name">{{ member.real_name }}</div>
+          {% endif %}
           <div class="creator-card-links">
-            <span>{% svg "icon_youtube" %}</span>
+            <span
+              ><a class="noline" target="_blank" href="{{ member.url }}"
+                >{% svg "icon_youtube" %}</a
+              ></span
+            >
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
+    <div class="button hollow large animated show-more-creators">
+      {% svg "icon_dots" %}
+    </div>
   </div>
   <script>
-    // randomise the order of the creators using `order`
-    const creatorCards = document.querySelector(
-      "#meet-the-creators .creator-cards"
-    );
-    console.log(creatorCards);
-    const creatorCardElements = Array.from(creatorCards.children);
-    creatorCardElements.sort(() => Math.random() - 0.5);
-    creatorCards.innerHTML = "";
-    creatorCardElements.forEach((el) => {
-      creatorCards.appendChild(el);
-    });
+    // Shuffle creator cards and handle show more
+    (function () {
+      const creatorCards = document.querySelector(
+        "#meet-the-creators .creator-cards"
+      );
+      if (!creatorCards) return;
+      const cards = Array.from(creatorCards.children);
+      // Shuffle cards
+      cards.sort(() => Math.random() - 0.5);
+      // Show only first 8, hide the rest
+      cards.forEach((el, idx) => {
+        if (idx > 7) {
+          el.classList.add("hidden");
+          el.style.display = "none";
+        } else {
+          el.classList.remove("hidden");
+          el.style.display = "flex";
+        }
+        creatorCards.appendChild(el);
+      });
+      // Show more button logic
+      const showMoreBtn = document.querySelector(
+        "#meet-the-creators .show-more-creators"
+      );
+      if (!showMoreBtn) return;
+      showMoreBtn.addEventListener("click", () => {
+        const hidden = creatorCards.querySelectorAll(".creator-card.hidden");
+        hidden.forEach((card, idx) => {
+          card.style.display = "flex";
+          setTimeout(() => {
+            card.classList.remove("hidden");
+            card.style.opacity = 1;
+            card.style.transform = "translateY(0)";
+          }, idx * 75);
+        });
+        showMoreBtn.style.display = "none";
+      });
+    })();
   </script>
+  <noscript>
+    <style>
+      .creator-card {
+        opacity: 1 !important;
+      }
+    </style>
+  </noscript>
 </section>

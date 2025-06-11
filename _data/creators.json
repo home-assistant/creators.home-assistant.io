@@ -2,41 +2,49 @@
   "members": [
     {
       "name": "Everything Smart Home",
+      "real_name": "Lewis Barclay",
       "image": "EverythingSmartHome.jpg",
       "url": "https://www.youtube.com/c/EverythingSmartHome"
     },
     {
       "name": "Mark Watt Tech",
+      "real_name": "Mark Watt",
       "image": "MarkWattTechLogo.jpg",
       "url": "https://www.youtube.com/c/MarkWattTech"
     },
     {
       "name": "Home Assistant Podcast",
+      "real_name": "Phil Hawthorne, Rohan Karamandi",
       "image": "hass-podcast-logo.jpg",
       "url": "https://hasspodcast.io/"
     },
     {
       "name": "Juan M Tech",
+      "real_name": "Name here",
       "image": "JuanMTech.png",
       "url": "https://www.youtube.com/c/JuanMTech"
     },
     {
       "name": "Bearded Tinker",
+      "real_name": "Andrej Broz",
       "image": "BeardedTinkerer.jpg",
       "url": "https://www.youtube.com/channel/UCuqokNoK8ZFNQdXxvlE129g"
     },
     {
       "name": "Dr Zzs",
+      "real_name": "Name here",
       "image": "DrZzs-Emoji.png",
       "url": "https://www.youtube.com/c/DrZzs"
     },
     {
       "name": "Home Automation Guy",
+      "real_name": "Alan Byrne",
       "image": "Alan.jpg",
       "url": "https://youtube.com/c/HomeAutomationGuy"
     },
     {
       "name": "Carlos",
+      "real_name": "Name here",
       "image": "Carlos.jpg",
       "url": "https://youtube.com/channel/UC2zp7AWsYhZaGmYTjP8hZ7A"
     },
@@ -87,6 +95,7 @@
     },
     {
       "name": "Vaclav",
+      "real_name": "Vaclav Chaloupka",
       "image": "vaclav.jpg",
       "url": "https://youtube.com/c/VaclavChaloupkaPhoto"
     },
@@ -107,6 +116,7 @@
     },
     {
       "name": "Smart Home Solver",
+      "real_name": "Reed Kleinman",
       "image": "smarthomesolver.jpg",
       "url": "https://www.youtube.com/@SmartHomeSolver"
     }

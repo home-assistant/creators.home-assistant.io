@@ -7,6 +7,7 @@
     border-radius: 40px;
     box-shadow: 0 3px 8px rgb(0, 0, 0, 0);
     color: #FFFFFF;
+    cursor: pointer;
     display: inline-flex;
     font-weight: 500;
     text-decoration: none;
@@ -26,6 +27,37 @@
             animation-play-state: paused;
         }
     }
+
+    &.hollow {
+        background: transparent;
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            border-radius: 40px;
+            background-color: var(--body-background-color);
+            z-index: -1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 40px;
+            background: var(--brand-color-home-assistant-blue);
+            z-index: -2;
+        }
+
+        &.animated {
+            &:after {
+                animation: gradient 5s ease-in-out infinite;
+                background: linear-gradient(259deg, #0C88C8 -14.63%, #57FFC1 104.2%);
+                background-size: 300% 300%;
+            }
+        }
+    }
+
 
     &.large {
         @include mixins.bp(desktop) {

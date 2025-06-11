@@ -118,21 +118,34 @@ section#what-is {
 
         @include mixins.bp(large-desktop) {}
 
+        // Animate in when data-dsap-seen is present on .creators
+        &[data-dsap-seen] {
+            @for $i from 1 through 30 {
+                .creator:nth-child(#{$i}) {
+                    img {
+                        opacity: 1;
+                        transition-delay: calc(0.075s * #{$i});
+                    }
+                }
+            }
+        }
 
         .creator {
             aspect-ratio: 125/230;
+            background-color: #e3e3e3;
             border-radius: 10rem;
-            overflow: hidden;
-            z-index: -1;
             height: min-content;
             max-width: 10rem;
-            background-color: #e3e3e3;
+            overflow: hidden;
+            z-index: -1;
 
-            &.loading {
-                img {
-                    opacity: 0;
-                }
+
+            img {
+                opacity: 0.001;
+                transition: opacity 0.3s ease-in-out;
             }
+
+
 
 
             &:nth-child(2n) {
@@ -141,11 +154,10 @@ section#what-is {
 
             img {
                 height: 100%;
-                width: 100%;
                 object-fit: cover;
                 object-position: center;
-                opacity: 1;
                 transition: opacity 0.3s ease-in-out;
+                width: 100%;
             }
         }
     }

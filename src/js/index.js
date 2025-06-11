@@ -95,3 +95,5 @@ faqItems.forEach(faqItem => {
         });
     });
 });
+
+const marquees = [...document.querySelectorAll('.marquee')];

@@ -2,4 +2,32 @@
 
 section#faq {
     padding: var(--section-spacing-y) 0;
+    margin-top: var(--section-spacing-y);
+
+    h2 {
+        position: relative;
+        isolation: isolate;
+
+        margin-bottom: 60px;
+
+        .svg {
+            animation: rotate 80s linear infinite;
+            position: absolute;
+            transform-origin: top;
+            left: 0px;
+            top: 25%;
+            transform: translateY(-50%);
+            width: 140px;
+            z-index: -1;
+
+            path {
+                fill: var(--color-tertiary);
+            }
+
+            @include mixins.bp(desktop) {
+                left: -125px;
+                width: 250px;
+            }
+        }
+    }
 }

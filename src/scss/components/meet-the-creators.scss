@@ -1,66 +1,111 @@
 @use "../mixins";
 
 section#meet-the-creators {
+    &>.container {
+        display: flex;
+        flex-direction: column;
+        padding-top: calc(var(--section-spacing-y) / 2);
+        padding-bottom: calc(var(--section-spacing-y) / 2);
+
+        >p.text-large {
+            text-align: center;
+            text-wrap: balance;
+        }
+    }
 
     .scrolly-text {
-
         h2 {
             font-size: clamp(1.5rem, 17vw, 450px);
-            transform: translateX(calc(0% + (-60% * (var(--dsap-scroll-delta) / var(--dsap-max-scroll-delta)))));
-            transition: transform 0s ease-out;
             white-space: nowrap;
-
-            &:after {
-                content: " Meet the Creators Meet the Creators";
-            }
-
-            @include mixins.bp(md) {
-                transform: translateX(calc(0% + (-35% * (var(--dsap-scroll-delta) / var(--dsap-max-scroll-delta)))));
-            }
         }
     }
 
     .creator-cards {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 16px;
+        justify-content: center;
+
+        &+.button {
+            margin: calc(var(--section-spacing-y) / 2) auto 0 auto;
+        }
+
+        &[data-dsap-seen] {
+            @for $i from 1 through 8 {
+                .creator-card:nth-child(#{$i}) {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-delay: calc(0.075s * #{$i});
+                }
+            }
+        }
 
         .creator-card {
-            display: flex;
-            padding: 10px 25px 10px 10px;
-            border-radius: 15rem;
-            gap: 20px;
             background-color: white;
+            border-radius: 8px;
+            display: flex;
+            flex-basis: 326px;
+            flex-grow: 1;
+            opacity: 0.001;
+            padding: 10px;
+            transform: translateY(40px);
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+            width: 100%;
+
+            &.hidden {
+                opacity: 0.001;
+                transform: translateY(40px);
+            }
+
+            @include mixins.bp(1090px) {
+                flex-grow: 0;
+            }
 
             img {
-                border-radius: 50%;
-                height: 70px;
-                width: 70px;
+                aspect-ratio: 1 / 1;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                height: 100px;
+
+                @include mixins.bp(desktop) {
+                    border-radius: 4px;
+                    height: 150px;
+                }
             }
 
             .creator-card-content {
                 display: flex;
-                gap: 4px;
-                justify-content: center;
                 flex-direction: column;
+                gap: 4px;
+                padding: 8px 10px;
             }
 
             .creator-card-title {
-                font-size: 20px;
-                font-weight: 600;
+                font-weight: 700;
+                line-height: normal;
             }
 
-            .creator-card-description {}
-
             .creator-card-links {
+                align-items: flex-end;
                 display: flex;
+                flex-grow: 1;
 
                 .svg {
                     width: 24px;
+
+                    path {
+                        transition: fill 0.25s ease-out;
+                    }
+
+                    &.svg-icon_youtube {
+                        &:hover {
+                            path {
+                                fill: #FF0000;
+                            }
+                        }
+                    }
                 }
             }
-
         }
     }
 }

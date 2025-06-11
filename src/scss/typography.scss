@@ -99,20 +99,39 @@ a:not(.button) {
     position: relative;
     color: initial;
 
-    &:after {
-        content: '';
-        left: 0;
-        width: 0%;
-        height: 1px;
-        position: absolute;
-        top: calc(100% + 2px);
-        background-color: var(--color-primary);
-        transition: width .3s ease-out
+    &:not(.noline) {
+        &:after {
+            content: '';
+            left: 0;
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            top: calc(100% + 2px);
+            background-color: var(--text-color);
+            transition: width .3s ease-out, left .3s ease-out,
+                background-color .3s ease-out;
+        }
+
+        &:hover {
+            &:after {
+                width: 100%;
+            }
+        }
     }
 
-    &:hover {
+    &.showline {
         &:after {
-            width: 100%;
+            background-color: color-mix(in srgb, var(--text-color) 25%, transparent);
+            width: 90%;
+            left: 5%;
+        }
+
+        &:hover {
+            &:after {
+                background-color: var(--text-color);
+                width: 100%;
+                left: 0;
+            }
         }
     }
 }
