@@ -1,6 +1,13 @@
 <section id="meet-the-creators">
-  <div class="scrolly-text">
-    <h2 class="marquee">Meet the creators</h2>
+  <div class="marquee">
+    <div class="marquee-inner">
+      <div>
+        <h2>Meet the creators</h2>
+      </div>
+    </div>
+    <div class="marquee-inner">
+      <div>Meet the creators</div>
+    </div>
   </div>
   <div class="container">
     <p class="text-large">
@@ -25,7 +32,7 @@
         />
         <div class="creator-card-content">
           <div class="creator-card-title">{{ member.name }}</div>
-          {% if member.real_name %}
+          {% if member.real_name and false %}
           <div class="creator-card-name">{{ member.real_name }}</div>
           {% endif %}
           <div class="creator-card-links">

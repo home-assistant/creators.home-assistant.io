@@ -3,6 +3,7 @@
 section#what-it-takes {
     --text-color: #ffffff;
     background-color: var(--color-primary);
+    padding-bottom: calc(var(--section-spacing-y) / 2);
 
     h2 {
         position: relative;
@@ -46,6 +47,7 @@ section#what-it-takes {
     .cols {
         flex-wrap: nowrap;
         flex-direction: column;
+        --layout-columns-gap: 60px 20px;
 
         @include mixins.bp(tablet) {
             flex-direction: row;

@@ -13,10 +13,43 @@ section#meet-the-creators {
         }
     }
 
-    .scrolly-text {
-        h2 {
-            font-size: clamp(1.5rem, 17vw, 450px);
+    .marquee {
+        --gap: 4rem;
+        display: flex;
+        gap: var(--gap);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .marquee .marquee-inner {
+        animation: marquee 12s linear infinite
+    }
+
+    .marquee .marquee-inner {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: var(--gap);
+        min-width: 100%;
+        animation-duration: 6s;
+
+        @include mixins.bp(large-mobile) {
+            animation-duration: 8s;
+        }
+    }
+
+    .marquee .marquee-inner>div {
+        font-weight: 700;
+        line-height: 1;
+        white-space: nowrap;
+
+        &,
+        * {
+            font-size: clamp(96px, 17vw, 450px);
+            color: var(--color-tertiary);
             white-space: nowrap;
+            line-height: 1;
         }
     }
 
@@ -108,4 +141,6 @@ section#meet-the-creators {
             }
         }
     }
+
+
 }

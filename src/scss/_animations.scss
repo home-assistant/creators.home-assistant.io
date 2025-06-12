@@ -31,3 +31,15 @@
     gap: 0.25em;
     overflow: hidden;
 }
+
+@keyframes marquee {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(calc(-100% - var(--gap)));
+        transform: translateX(calc(-100% - var(--gap)))
+    }
+}
