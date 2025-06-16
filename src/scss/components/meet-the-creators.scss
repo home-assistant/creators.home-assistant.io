@@ -36,14 +36,14 @@ section#meet-the-creators {
         justify-content: space-around;
         gap: var(--gap);
         min-width: 100%;
-        animation-duration: 8s;
+        animation-duration: 14s;
 
         @include mixins.bp(tablet) {
-            animation-duration: 10s;
+            animation-duration: 16s;
         }
 
         @include mixins.bp(desktop) {
-            animation-duration: 12s;
+            animation-duration: 20s;
         }
     }
 
