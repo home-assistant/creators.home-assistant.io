@@ -4,12 +4,14 @@
       "name": "Everything Smart Home",
       "real_name": "Lewis Barclay",
       "image": "EverythingSmartHome.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/EverythingSmartHome"
     },
     {
       "name": "Mark Watt Tech",
       "real_name": "Mark Watt",
       "image": "MarkWattTechLogo.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/MarkWattTech"
     },
     {
@@ -21,96 +23,107 @@
     {
       "name": "Juan M Tech",
       "image": "JuanMTech.png",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/JuanMTech"
     },
     {
       "name": "Bearded Tinker",
       "real_name": "Andrej Broz",
       "image": "BeardedTinkerer.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/channel/UCuqokNoK8ZFNQdXxvlE129g"
     },
     {
-      "name": "Dr Zzs",
+      "name": "DrZzs & GrZzs",
       "image": "DrZzs-Emoji.png",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/DrZzs"
     },
     {
       "name": "Home Automation Guy",
       "real_name": "Alan Byrne",
       "image": "Alan.jpg",
+      "url_icon": "youtube",
       "url": "https://youtube.com/c/HomeAutomationGuy"
     },
     {
       "name": "Carlos",
       "real_name": "Carlos Cordero",
       "image": "Carlos.jpg",
+      "url_icon": "youtube",
       "url": "https://youtube.com/channel/UC2zp7AWsYhZaGmYTjP8hZ7A"
     },
     {
       "name": "Kiril",
       "real_name": "Kiril Peyanski",
       "image": "Kiril.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/kpeyanski"
     },
     {
       "name": "Make it work",
       "real_name": "Aron",
       "image": "makeitwork.jpg",
+      "url_icon": "youtube",
       "url": "https://youtube.com/c/MakeItWorkTech"
     },
     {
       "name": "Rosemary Orchard",
       "image": "rosemary_orchard.jpg",
-      "url": "https://twitter.com/RosemaryOrchard"
+      "url_icon": "mastodon",
+      "url": "https://snailedit.social/@rosemary"
     },
     {
       "name": "The Hook Up",
       "real_name": "Robert Tait",
       "image": "The_hook_up.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/TheHookUp"
     },
     {
       "name": "Mostly Chris",
       "real_name": "Chris",
       "image": "mostlyChris.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/mostlychris"
     },
     {
       "name": "Slacker Labs",
       "real_name": "Jeffrey Stone",
       "image": "SlackerLabs.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/SlackerLabs"
-    },
-    {
-      "name": "Terrence Smith",
-      "image": "Terrence.jpg",
-      "url": "https://vm.tiktok.com/ZTdqMsmUG/"
     },
     {
       "name": "Smart Rev",
       "image": "smart_rev.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/smartrev"
     },
     {
       "name": "Smart Home Junkie",
       "image": "SmartHomeJunkie.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/c/smarthomejunkie"
     },
     {
       "name": "Vaclav",
       "real_name": "Vaclav Chaloupka",
       "image": "vaclav.jpg",
+      "url_icon": "youtube",
       "url": "https://youtube.com/c/VaclavChaloupkaPhoto"
     },
     {
       "name": "digiblurDIY",
       "real_name": "Travis",
       "image": "digiblur.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/digiblurDIY"
     },
     {
       "name": "ArminasTV",
       "image": "arminastv.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/@ArminasTV"
     },
     {
@@ -122,7 +135,27 @@
       "name": "Smart Home Solver",
       "real_name": "Reed",
       "image": "smarthomesolver.jpg",
+      "url_icon": "youtube",
       "url": "https://www.youtube.com/@SmartHomeSolver"
+    },
+    {
+      "name": "Dinamo Tech",
+      "image": "dinamotech.jpg",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/@DinamoTech"
+    },
+    {
+      "name": "PLUYU",
+      "image": "pluyu.jpg",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/@PLUYU"
+    },
+    {
+      "name": "XLLR8ING",
+      "real_name": "Terry Smith",
+      "image": "xllr8ing.jpeg",
+      "url_icon": "tiktok",
+      "url": "https://www.tiktok.com/@xllr8ing"
     }
   ]
 }

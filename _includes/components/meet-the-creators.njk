@@ -39,9 +39,10 @@
           {% endif %}
           <div class="creator-card-links">
             <span
-              ><a class="noline" target="_blank" href="{{ member.url }}"
-                >{% svg "icon_youtube" %}</a
-              ></span
+              ><a class="noline" target="_blank" href="{{ member.url }}">
+                {% if member.url_icon %} {% svg "icon_" + member.url_icon %} {%
+                else %} {% svg "icon_link" %} {% endif %}
+              </a></span
             >
           </div>
         </div>
