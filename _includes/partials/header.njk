@@ -1,6 +1,6 @@
 <div class="header">
   <div class="container">
-    <div class="logo">
+    <div class="logo top">
       <img
         src="/img/home-assistant-logo.svg"
         class="logo logo-dark"
@@ -34,4 +34,13 @@
       <a href="#apply" class="button animated">Get in touch</a>
     </div>
   </div>
+  <script>
+    // if right click logo, navigate to https://design.home-assistant.io/#brand/logo
+    document
+      .querySelector(".logo")
+      .addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        window.location.href = "https://design.home-assistant.io/#brand/logo";
+      });
+  </script>
 </div>

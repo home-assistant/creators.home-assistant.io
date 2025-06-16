@@ -95,3 +95,17 @@ faqItems.forEach(faqItem => {
         });
     });
 });
+
+
+// .top, when clicked, scroll to top of page
+let topButton = document.querySelectorAll('.top');
+if (topButton) {
+    topButton.forEach(button => {
+        button.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+}
