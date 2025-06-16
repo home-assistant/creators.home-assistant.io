@@ -25,3 +25,17 @@
 
     .col {}
 }
+
+.sepia {
+    background: #002332;
+    display: flex;
+    isolation: isolate;
+
+    img {
+        background: linear-gradient(0deg, #000 0%, #000 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+        background-blend-mode: saturation, normal;
+        mix-blend-mode: exclusion;
+        filter: grayscale(100%);
+        z-index: -1;
+    }
+}

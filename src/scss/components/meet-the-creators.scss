@@ -115,6 +115,12 @@ section#meet-the-creators {
                 }
             }
 
+            .creator-card-image {
+                border-radius: 8px;
+                overflow: hidden;
+                flex-shrink: 0;
+            }
+
             .creator-card-content {
                 display: flex;
                 flex-direction: column;
@@ -175,6 +181,4 @@ section#meet-the-creators {
             }
         }
     }
-
-
 }

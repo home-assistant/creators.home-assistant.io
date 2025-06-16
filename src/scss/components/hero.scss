@@ -3,7 +3,6 @@
 section#hero {
     --text-color: #ffffff;
     align-items: center;
-
     z-index: 1;
 
     &:before {
@@ -110,7 +109,6 @@ section#hero {
         line-height: 1.2;
         gap: 8px;
 
-
         @include mixins.bp(large-desktop) {
             font-size: 40px;
             margin-bottom: 16px;
@@ -167,7 +165,6 @@ section#hero {
             height: 160px;
         }
 
-
         .svg-shape_two {
             position: absolute;
             z-index: 1;
@@ -183,7 +180,6 @@ section#hero {
             @include mixins.bp(large-desktop) {
                 width: 315px;
                 top: 35%;
-
             }
         }
     }

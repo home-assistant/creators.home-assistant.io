@@ -53,7 +53,6 @@ section#what-it-takes {
             flex-direction: row;
         }
 
-
         .col.content-col {
             width: 100%;
 
@@ -64,7 +63,6 @@ section#what-it-takes {
                     max-width: 440px;
                 }
             }
-
 
             .biglist {
                 margin: 0 auto;
@@ -100,7 +98,6 @@ section#what-it-takes {
                     left: 0;
                     position: absolute;
                     z-index: -1;
-
                     transform: translate(-25%, 30%);
 
                     @include mixins.bp(tablet) {

@@ -18,10 +18,9 @@
     transition: box-shadow 0.3s ease-in-out, background-position 0.3s ease-in-out;
 
     &.animated {
+        animation: gradient 5s ease-in-out infinite;
         background: linear-gradient(259deg, #0C88C8 -14.63%, #57FFC1 104.2%);
         background-size: 300% 300%;
-
-        animation: gradient 5s ease-in-out infinite;
 
         @media (prefers-reduced-motion: reduce) {
             animation: none;

@@ -12,7 +12,6 @@ export default async function (eleventyConfig) {
 			"public": "/",
 			"src/img": "img",
 			"src/js": "js",
-			"src/svg": "svg",
 			"src/video": "video",
 		});
 
@@ -22,7 +21,6 @@ export default async function (eleventyConfig) {
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("src/scss/**/*.scss");
 	eleventyConfig.addWatchTarget("src/js/**/*.js");
-	eleventyConfig.addWatchTarget("src/svg/**/*");
 	eleventyConfig.addWatchTarget("src/img/**/*");
 
 	// Plugins
