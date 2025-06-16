@@ -75,28 +75,6 @@ faqItems.forEach(faqItem => {
     });
 });
 
-//  if url contains id of faq item, open it
-faqItems.forEach(faqItem => {
-
-
-    if (window.location.hash === '#' + faqItem.id) {
-        faqItem.scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => {
-            faqItem.classList.add('active');
-        }, 1000);
-    }
-
-    document.querySelectorAll('a[href="#' + faqItem.id + '"]').forEach(link => {
-        link.addEventListener('click', function () {
-            faqItem.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => {
-                faqItem.classList.add('active');
-            }, 1000);
-        });
-    });
-});
-
-
 // .top, when clicked, scroll to top of page
 let topButton = document.querySelectorAll('.top');
 if (topButton) {
