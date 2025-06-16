@@ -41,7 +41,7 @@ ol.biglist {
         }
 
         &:not(:last-child) {
-            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            border-bottom: 2px solid rgba(255, 255, 255, .1);
         }
 
         &:nth-child(even) {

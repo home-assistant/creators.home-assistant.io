@@ -12,17 +12,15 @@ section#what-it-takes {
 
         .svg {
             --width: 140px;
+            animation: zoom-in 1.5s .5s ease-out forwards;
             width: var(--width);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-
-            animation: zoom-in 1.5s .5s ease-out forwards;
             z-index: -1;
 
             @include mixins.bp(large-mobile) {
                 --width: 200px;
-
             }
 
             @include mixins.bp(desktop) {
@@ -66,7 +64,6 @@ section#what-it-takes {
 
             .biglist {
                 margin: 0 auto;
-
             }
         }
 
