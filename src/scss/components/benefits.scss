@@ -9,7 +9,7 @@ section#benefits {
         content: '';
         left: 0;
         position: absolute;
-        top: 50%;
+        top: calc(50% - (var(--section-spacing-y) / 2));
         width: 100%;
         z-index: -1;
     }
