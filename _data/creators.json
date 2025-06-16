@@ -10,7 +10,7 @@
     {
       "name": "Mark Watt Tech",
       "real_name": "Mark Watt",
-      "image": "MarkWattTechLogo.jpg",
+      "image": "markwatt.png",
       "url_icon": "youtube",
       "url": "https://www.youtube.com/c/MarkWattTech"
     },
@@ -47,7 +47,7 @@
       "url": "https://youtube.com/c/HomeAutomationGuy"
     },
     {
-      "name": "Carlos",
+      "name": "Un loco y su tecnología",
       "real_name": "Carlos Cordero",
       "image": "Carlos.jpg",
       "url_icon": "youtube",
@@ -76,14 +76,14 @@
     {
       "name": "The Hook Up",
       "real_name": "Robert Tait",
-      "image": "The_hook_up.jpg",
+      "image": "thehookup.png",
       "url_icon": "youtube",
       "url": "https://www.youtube.com/c/TheHookUp"
     },
     {
       "name": "Mostly Chris",
       "real_name": "Chris",
-      "image": "mostlyChris.jpg",
+      "image": "mostlychris.png",
       "url_icon": "youtube",
       "url": "https://www.youtube.com/c/mostlychris"
     },
@@ -116,7 +116,7 @@
     {
       "name": "digiblurDIY",
       "real_name": "Travis",
-      "image": "digiblur.jpg",
+      "image": "digiblur.png",
       "url_icon": "youtube",
       "url": "https://www.youtube.com/digiblurDIY"
     },
@@ -146,14 +146,14 @@
     },
     {
       "name": "PLUYU",
-      "image": "pluyu.jpg",
+      "image": "pluyu.png",
       "url_icon": "youtube",
       "url": "https://www.youtube.com/@PLUYU"
     },
     {
       "name": "XLLR8ING",
       "real_name": "Terry Smith",
-      "image": "xllr8ing.jpeg",
+      "image": "xllr8ing.png",
       "url_icon": "tiktok",
       "url": "https://www.tiktok.com/@xllr8ing"
     }
