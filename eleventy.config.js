@@ -16,8 +16,6 @@ export default async function (eleventyConfig) {
 			"src/video": "video",
 		});
 
-	eleventyConfig.addGlobalData("CACHE_KEY", btoa("" + new Date().valueOf()).replaceAll("=", ""));
-
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
@@ -27,14 +25,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("src/svg/**/*");
 	eleventyConfig.addWatchTarget("src/img/**/*");
 
-	// GSAP
-	eleventyConfig.addPassthroughCopy({ "node_modules/gsap/dist/gsap.min.js": "js/vendor/gsap.min.js" });
-
-	// Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
-	// Adds the {% css %} paired shortcode
-
 	// Plugins
-
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
 		preAttributes: { tabindex: 0 }
 	});
