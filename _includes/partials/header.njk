@@ -36,11 +36,15 @@
   </div>
   <script>
     // if right click logo, navigate to https://design.home-assistant.io/#brand/logo
-    document
-      .querySelector(".logo")
-      .addEventListener("contextmenu", function (e) {
+    document.querySelector(".logo").addEventListener(
+      "contextmenu",
+      function (e) {
         e.preventDefault();
         window.location.href = "https://design.home-assistant.io/#brand/logo";
-      });
+      },
+      {
+        passive: true,
+      }
+    );
   </script>
 </div>
