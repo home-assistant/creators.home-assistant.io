@@ -3,10 +3,11 @@
     <div class="marquee-inner">
       <div>
         <h2>Meet the creators</h2>
+        <span>&nbsp;Meet the creators</span>
       </div>
     </div>
     <div class="marquee-inner">
-      <div>Meet the creators</div>
+      <div>Meet the creators Meet the creators</div>
     </div>
   </div>
   <div class="container">
@@ -32,7 +33,7 @@
         />
         <div class="creator-card-content">
           <div class="creator-card-title">{{ member.name }}</div>
-          {% if member.real_name and false %}
+          {% if member.real_name %}
           <div class="creator-card-name">{{ member.real_name }}</div>
           {% endif %}
           <div class="creator-card-links">
@@ -80,11 +81,15 @@
         const hidden = creatorCards.querySelectorAll(".creator-card.hidden");
         hidden.forEach((card, idx) => {
           card.style.display = "flex";
+          let delay = 75;
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            delay = 0;
+          }
           setTimeout(() => {
             card.classList.remove("hidden");
             card.style.opacity = 1;
             card.style.transform = "translateY(0)";
-          }, idx * 75);
+          }, idx * delay);
         });
         showMoreBtn.style.display = "none";
       });

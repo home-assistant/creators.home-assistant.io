@@ -23,6 +23,10 @@
 
         animation: gradient 5s ease-in-out infinite;
 
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+
         &:hover {
             animation-play-state: paused;
         }

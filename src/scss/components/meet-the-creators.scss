@@ -23,7 +23,11 @@ section#meet-the-creators {
     }
 
     .marquee .marquee-inner {
-        animation: marquee 12s linear infinite
+        animation: marquee 12s linear infinite;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none !important;
+        }
     }
 
     .marquee .marquee-inner {
@@ -42,6 +46,7 @@ section#meet-the-creators {
     .marquee .marquee-inner>div {
         font-weight: 700;
         line-height: 1;
+        display: flex;
         white-space: nowrap;
 
         &,
@@ -84,6 +89,10 @@ section#meet-the-creators {
             transform: translateY(40px);
             transition: transform 0.5s ease-out, opacity 0.5s ease-out;
             width: 100%;
+
+            @media (prefers-reduced-motion: reduce) {
+                transition: none !important;
+            }
 
             &.hidden {
                 opacity: 0.001;

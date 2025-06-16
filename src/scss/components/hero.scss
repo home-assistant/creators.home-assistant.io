@@ -60,6 +60,14 @@ section#hero {
                 width: 100%;
             }
 
+            svg,
+            & {
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none !important;
+                    opacity: 1;
+                }
+            }
+
             @include mixins.bp(large-mobile) {
                 --width: 200px;
                 left: calc((100% - (var(--width) / 2)) + 2%);

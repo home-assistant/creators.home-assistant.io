@@ -20,7 +20,6 @@
     },
     {
       "name": "Juan M Tech",
-      "real_name": "Name here",
       "image": "JuanMTech.png",
       "url": "https://www.youtube.com/c/JuanMTech"
     },
@@ -32,7 +31,6 @@
     },
     {
       "name": "Dr Zzs",
-      "real_name": "Name here",
       "image": "DrZzs-Emoji.png",
       "url": "https://www.youtube.com/c/DrZzs"
     },
@@ -44,17 +42,19 @@
     },
     {
       "name": "Carlos",
-      "real_name": "Name here",
+      "real_name": "Carlos Cordero",
       "image": "Carlos.jpg",
       "url": "https://youtube.com/channel/UC2zp7AWsYhZaGmYTjP8hZ7A"
     },
     {
       "name": "Kiril",
+      "real_name": "Kiril Peyanski",
       "image": "Kiril.jpg",
       "url": "https://www.youtube.com/kpeyanski"
     },
     {
       "name": "Make it work",
+      "real_name": "Aron",
       "image": "makeitwork.jpg",
       "url": "https://youtube.com/c/MakeItWorkTech"
     },
@@ -65,16 +65,19 @@
     },
     {
       "name": "The Hook Up",
+      "real_name": "Robert Tait",
       "image": "The_hook_up.jpg",
       "url": "https://www.youtube.com/c/TheHookUp"
     },
     {
       "name": "Mostly Chris",
+      "real_name": "Chris",
       "image": "mostlyChris.jpg",
       "url": "https://www.youtube.com/c/mostlychris"
     },
     {
       "name": "Slacker Labs",
+      "real_name": "Jeffrey Stone",
       "image": "SlackerLabs.jpg",
       "url": "https://www.youtube.com/c/SlackerLabs"
     },
@@ -101,6 +104,7 @@
     },
     {
       "name": "digiblurDIY",
+      "real_name": "Travis",
       "image": "digiblur.jpg",
       "url": "https://www.youtube.com/digiblurDIY"
     },
@@ -116,7 +120,7 @@
     },
     {
       "name": "Smart Home Solver",
-      "real_name": "Reed Kleinman",
+      "real_name": "Reed",
       "image": "smarthomesolver.jpg",
       "url": "https://www.youtube.com/@SmartHomeSolver"
     }

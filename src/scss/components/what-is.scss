@@ -140,9 +140,16 @@ section#what-is {
             z-index: -1;
 
 
+
             img {
                 opacity: 0.001;
                 transition: opacity 0.3s ease-in-out;
+
+                @media (prefers-reduced-motion: reduce) {
+                    opacity: 1;
+                    transition: none !important;
+                }
+
             }
 
 

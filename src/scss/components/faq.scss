@@ -20,6 +20,10 @@ section#faq {
             width: 140px;
             z-index: -1;
 
+            @media (prefers-reduced-motion: reduce) {
+                animation: none !important;
+            }
+
             path {
                 fill: var(--color-tertiary);
             }
