@@ -18,12 +18,14 @@
       "name": "Home Assistant Podcast",
       "real_name": "Phil Hawthorne, Rohan Karamandi",
       "image": "hass-podcast-logo.png",
+      "hide_from_pills": true,
       "url": "https://hasspodcast.io/"
     },
     {
       "name": "Juan M Tech",
       "image": "JuanMTech.png",
       "url_icon": "youtube",
+      "hide_from_pills": true,
       "url": "https://www.youtube.com/c/JuanMTech"
     },
     {
@@ -37,6 +39,7 @@
       "name": "DrZzs & GrZzs",
       "image": "DrZzs-Emoji.png",
       "url_icon": "youtube",
+      "hide_from_pills": true,
       "url": "https://www.youtube.com/c/DrZzs"
     },
     {
@@ -51,6 +54,7 @@
       "real_name": "Carlos Cordero",
       "image": "Carlos.jpg",
       "url_icon": "youtube",
+      "hide_from_pills": true,
       "url": "https://youtube.com/channel/UC2zp7AWsYhZaGmYTjP8hZ7A"
     },
     {
@@ -124,11 +128,13 @@
       "name": "ArminasTV",
       "image": "arminastv.jpg",
       "url_icon": "youtube",
+      "hide_from_pills": true,
       "url": "https://www.youtube.com/@ArminasTV"
     },
     {
       "name": "Home Assistant Communaute Francophone",
       "image": "hacf.jpg",
+      "hide_from_pills": true,
       "url": "https://www.hacf.fr"
     },
     {
@@ -142,6 +148,7 @@
       "name": "Dinamo Tech",
       "image": "dinamotech.jpg",
       "url_icon": "youtube",
+      "hide_from_pills": true,
       "url": "https://www.youtube.com/@DinamoTech"
     },
     {
