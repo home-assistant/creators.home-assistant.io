@@ -163,6 +163,54 @@
       "image": "xllr8ing.png",
       "url_icon": "tiktok",
       "url": "https://www.tiktok.com/@xllr8ing"
+    },
+    {
+      "name": "Domasist",
+      "real_name": "Richard Hlavňa",
+      "image": "domasist.png",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/@domasist_sk"
+    },
+    {
+      "name": "This Smart House",
+      "real_name": "Ryan Holland",
+      "image": "this-smart-house.png",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/@ThisSmartHouse"
+    },
+    {
+      "name": "Tristans Smartes Heim",
+      "real_name": "Tristan Küsters",
+      "image": "tristans-smartes-heim.png",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/@tristanssmartesheim"
+    },
+    {
+      "name": "Home Assistant Fácil",
+      "real_name": "Juan Antonio Carrillo Navarro",
+      "image": "home-assistant-facil.png",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/c/JuanAntonioCarrilloNavarro"
+    },
+    {
+      "name": "Hometech.fm",
+      "real_name": "Gavin Campbell",
+      "image": "hometech-fm.png",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/@hometechfm"
+    },
+    {
+      "name": "Smart Tech Arabic",
+      "real_name": "Shady Nafie",
+      "image": "smart-tech-arabic.png",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/smarttecharabic"
+    },
+    {
+      "name": "Hands On Katie",
+      "image": "hands-on-katie.png",
+      "url_icon": "youtube",
+      "url": "https://www.youtube.com/@handsonkatie"
     }
   ]
 }
