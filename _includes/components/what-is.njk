@@ -24,8 +24,7 @@
       </div>
       <div class="col what-is-creators">
         <div class="creators" data-dsap data-dsap-scroll>
-          {% for member in creators.members %} {% if not member.hide_from_pills
-          %}
+          {% for member in creators.members %} {% if member.featured %}
           <div class="creator loading">
             <img
               src="/img/creators/{{ member.image }}"
