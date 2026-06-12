@@ -27,7 +27,7 @@
 	"dependencies": {
 		"gsap": "^3.13.0",
 		"sass": "^1.85.1",
-		"sharp": "^0.34.2",
+		"sharp": "^0.35.1",
 		"svg-sprite": "^2.0.4",
 		"watch": "^1.0.2"
 	}
