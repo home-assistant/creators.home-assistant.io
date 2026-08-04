@@ -3,8 +3,8 @@ import { statSync, existsSync } from "fs";
 
 export function cacheBuster(eleventyConfig) {
     eleventyConfig.addTransform("cache-buster", function (content, outputPath) {
-        const cssInputDir = resolve(eleventyConfig.dir.input, "css");
-        const jsInputDir = resolve(eleventyConfig.dir.input, "js");
+        const cssInputDir = resolve("src", "css");
+        const jsInputDir = resolve("src", "js");
         const cssOutputDir = resolve(eleventyConfig.dir.output, "css");
         const jsOutputDir = resolve(eleventyConfig.dir.output, "js");
         if (outputPath.endsWith(".html")) {
