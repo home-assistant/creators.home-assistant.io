@@ -1,0 +1,124 @@
+@use "../mixins";
+
+section#not-found {
+    --text-color: #ffffff;
+    align-items: center;
+    z-index: 1;
+
+    &:before {
+        content: '';
+        background: linear-gradient(90deg, #0898C7 0%, #006BA8 100%);
+        position: absolute;
+        height: 120px;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .not-found-inner {
+        padding: 80px 0;
+        overflow: hidden;
+        isolation: isolate;
+        background: linear-gradient(90deg, #0898C7 0%, #006BA8 100%);
+
+        @include mixins.bp(large-desktop) {
+            padding: 140px 0;
+        }
+    }
+
+    .not-found-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        max-width: 720px;
+    }
+
+    .code-wrapper {
+        position: relative;
+        display: inline-flex;
+
+        .code {
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.02em;
+
+            @include mixins.bp(large-mobile) {
+                font-size: 140px;
+            }
+
+            @include mixins.bp(tablet) {
+                font-size: 180px;
+            }
+        }
+
+        .svg {
+            --width: 90px;
+            color: var(--color-light-primary);
+            position: absolute;
+            width: var(--width);
+            left: calc(100% - (var(--width) / 3));
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            transform-origin: center;
+            scale: 0.8;
+            opacity: 0;
+            animation: zoom-in .75s .3s cubic-bezier(.17, .6, .43, .97) forwards;
+
+            svg {
+                animation: rotate 80s linear infinite;
+                width: 100%;
+            }
+
+            svg,
+            & {
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none !important;
+                    opacity: 1;
+                }
+            }
+
+            @include mixins.bp(large-mobile) {
+                --width: 130px;
+            }
+
+            @include mixins.bp(tablet) {
+                --width: 170px;
+            }
+        }
+    }
+
+    h1 {
+        font-size: var(--typography-h2-font-size);
+        line-height: var(--typography-h2-line-height);
+    }
+
+    p {
+        opacity: 0.9;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px 28px;
+        margin-top: 8px;
+    }
+
+    .text-link {
+        display: inline-flex;
+        align-items: center;
+        align-self: stretch;
+        color: var(--text-color);
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: opacity 0.2s ease-in-out;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+---
+layout: base.njk
+permalink: 404.html
+title: Page not found | Home Assistant Creator Network
+sitemap: false
+---
+
+{% include 'components/not-found.njk' %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    plausible('404');
+  });
+</script>
