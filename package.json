@@ -4,9 +4,11 @@
 	"description": "The website for the Home Assistant Partner website",
 	"type": "module",
 	"scripts": {
+		"prebuild": "node script/fetch-allowed-referrers.js",
 		"build": "npm run build:scss && npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
 		"build-ghpages": "npx @11ty/eleventy --pathprefix=/site/",
+		"prestart": "node script/fetch-allowed-referrers.js",
 		"start": "concurrently \"npx @11ty/eleventy --serve --quiet\" \"npm run watch:scss\"",
 		"start-ghpages": "concurrently \"npx @11ty/eleventy --pathprefix=/site/ --serve --quiet\" \"npm run watch:js\"",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
