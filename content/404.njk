@@ -9,6 +9,6 @@ sitemap: false
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    plausible('404');
+    if (typeof window.plausible === 'function') window.plausible('404');
   });
 </script>
